@@ -1,0 +1,18 @@
+#app,
+html,
+body {
+  overflow-x: hidden;
+}
+*{
+  box-sizing: border-box;
+}
+
+.van-image__error {
+  background-color: #fff !important;
+}
+.van-list__finished-text {
+  width: 100% !important;
+}
+.van-list__loading {
+  margin: auto;
+}
