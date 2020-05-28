@@ -19,7 +19,7 @@
     <!-- 个人信息 -->
     <div class="jl_content">
       <div class="jl_top">
-        <div class="jl_item">
+        <div class="jl_item" @click="rzxx()">
           <div class="jl_item_l">
             <div class="jl_item_l_l">
               <img src="../assets/images/rzgl@2x.png" alt="">
@@ -31,7 +31,7 @@
           </div>
           <img class="jl_item_r" src="../assets/images/jl_toback@2x.png" alt="">
         </div>
-        <div class="jl_item">
+        <div class="jl_item" @click="grxx()">
           <div class="jl_item_l">
             <div class="jl_item_l_l">
               <img src="../assets/images/grxx@2x.png" alt="">
@@ -43,7 +43,7 @@
           </div>
           <img class="jl_item_r" src="../assets/images/jl_toback@2x.png" alt="">
         </div>
-        <div class="jl_item">
+        <div class="jl_item" @click="jyjy()">
           <div class="jl_item_l">
             <div class="jl_item_l_l">
               <img src="../assets/images/jyxx@2x.png" alt="">
@@ -55,7 +55,7 @@
           </div>
           <img class="jl_item_r" src="../assets/images/jl_toback@2x.png" alt="">
         </div>
-        <div class="jl_item">
+        <div class="jl_item" @click="gzjy()">
           <div class="jl_item_l">
             <div class="jl_item_l_l">
               <img src="../assets/images/gzjy@2x.png" alt="">
@@ -67,7 +67,7 @@
           </div>
           <img class="jl_item_r" src="../assets/images/jl_toback@2x.png" alt="">
         </div>
-        <div class="jl_item">
+        <div class="jl_item" @click="xgzz()">
           <div class="jl_item_l">
             <div class="jl_item_l_l">
               <img src="../assets/images/zzzs@2x.png" alt="">
@@ -79,17 +79,21 @@
           </div>
           <img class="jl_item_r" src="../assets/images/jl_toback@2x.png" alt="">
         </div>
-        <div class="jl_item">
+        <div class="jl_item" @click="Show()">
           <div class="jl_item_l">
             <div class="jl_item_l_l_lv">
               <img src="../assets/images/word@2x.png" alt="">
             </div>
-            <div class="jl_item_l_r">
+            <div class="jl_item_l_r" v-show="!isShow">
               <div>附件简历</div>
               <div>可以上传附件简历</div>
             </div>
+            <div class="jl_item_l_r_2" v-show="isShow">
+              <div>个人简历个人简历个人-张桐桐</div>
+              <div>54.5KB</div>
+            </div>
           </div>
-          <img class="jl_item_r" src="../assets/images/tj@2x.png" alt="">
+          <img class="jl_item_r" v-show="!isShow" src="../assets/images/tj@2x.png" alt="">
         </div>
       </div>
     </div>
@@ -106,11 +110,40 @@
 export default {
   data() {
     return {
+      isShow:0,
     }
   },
   created() {
   },
   methods: {
+    Show(){
+      this.isShow = !this.isShow
+    },
+    rzxx(){
+      this.$router.push({
+        path:`/rzxx`
+      })
+    },
+    grxx(){
+      this.$router.push({
+        path:`/grxx`
+      })
+    },
+    jyjy(){
+      this.$router.push({
+        path:`/jyjy`
+      })
+    },
+    gzjy(){
+      this.$router.push({
+        path:`/gzjy`
+      })
+    },
+    xgzz(){
+      this.$router.push({
+        path:`/xgzz`
+      })
+    }
     // newsxq(){
     //   this.$router.push({
     //       path: `/ywhz_xq`,
@@ -256,6 +289,25 @@ export default {
             font-weight:400;
             line-height:0.51rem;
             color:rgba(161,161,161,1);
+          }
+        }
+        .jl_item_l_r_2{
+          margin-left: 0.16rem;
+          div:nth-child(1){
+            font-size:0.43rem;
+            font-family:Roboto;
+            font-weight:400;
+            line-height:0.56rem;
+            color:rgba(54,54,54,1);
+          }
+          div:nth-child(2){
+            margin-top:0.1rem;
+            font-size:0.35rem;
+            font-family:Roboto;
+            font-weight:400;
+            line-height:0.45rem;
+            color:rgba(108,108,108,1);
+            opacity:0.66;
           }
         }
       }
