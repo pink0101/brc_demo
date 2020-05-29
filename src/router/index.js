@@ -19,6 +19,13 @@ import tzxx from '../views/tzxx.vue'
 import tzxx_xq from '../views/tzxx_xq.vue'
 import ygyw from '../views/ygyw.vue'
 import gzt from '../views/gzt.vue'
+import gzkxx_tj from '../views/gzkxx_tj.vue'
+import sssq from '../views/sssq.vue'
+import lzsq from '../views/lzsq.vue'
+import lzsq_qr from '../views/lzsq_qr.vue'
+import fqgd from '../views/fqgd.vue'
+import fqgd_xq from '../views/fqgd_xq.vue'
+import hfcl from '../views/hfcl.vue'
 
 
 Vue.use(VueRouter)
@@ -48,6 +55,13 @@ const routes = [
   { path: '/tzxx_xq', component: tzxx_xq },
   { path: '/ygyw', component: ygyw },
   { path: '/gzt', component: gzt },
+  { path: '/gzkxx_tj', component: gzkxx_tj },
+  { path: '/sssq', component: sssq },
+  { path: '/lzsq', component: lzsq },
+  { path: '/lzsq_qr', component: lzsq_qr },
+  { path: '/fqgd', component: fqgd },
+  { path: '/fqgd_xq', component: fqgd_xq },
+  { path: '/hfcl', component: hfcl },
 ]
 
 const router = new VueRouter({
